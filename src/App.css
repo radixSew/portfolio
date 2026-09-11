@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Inter", sans-serif;
+  background: #05070b;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(0, 212, 255, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(124, 58, 237, 0.08),
+      transparent 25%
+    ),
+    #05070b;
+}
+
+.container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.section-title {
+  margin-bottom: 60px;
+}
+
+.section-label {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+
+  color: #00d4ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.section-label::before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: #00d4ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.section-title h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(35px, 5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.section-title p:last-child {
+  margin-top: 18px;
+  max-width: 650px;
+  color: #858d9d;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 90px 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section-title {
+    margin-bottom: 40px;
   }
 }
